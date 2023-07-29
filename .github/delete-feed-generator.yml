@@ -1,0 +1,28 @@
+name: Delete feed generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      record_key:
+        description: "recordKey"
+        required: true
+        type: string
+
+env:
+  BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
+  BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+
+jobs:
+  delete_feed_generator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
+      - name: Install
+        run: npm install
+
+      - name: Run script
+        env:
+          RECORD_KEY: ${{ inputs.record_key }}
+        run: npm run deleteFeed
