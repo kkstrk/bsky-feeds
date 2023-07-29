@@ -1,5 +1,8 @@
 name: Deploy Cloudflare Worker
 
+on:
+  workflow_dispatch:
+
 env:
   BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
   BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
