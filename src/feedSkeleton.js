@@ -23,7 +23,7 @@ const filterPosts = (posts, filters) => {
 	return posts.filter((post) => {
 		const {
 			user: { did },
-			_embed,
+			_embed = {},
 			_reply,
 		} = post;
 
@@ -31,7 +31,7 @@ const filterPosts = (posts, filters) => {
 			return false;
 		}
 
-		if (filter.embed && _embed === false) {
+		if (filter.embed?.images && _embed.images === false) {
 			return false;
 		}
 
@@ -91,7 +91,10 @@ export default async (request, env) => {
 			posts = searchPosts.map((post) => {
 				const match = getPostsData.find(({ cid }) => cid === post.cid);
 				if (match) {
-					post._embed = !!match.embed;
+					post._embed = {
+						// external: !!match.embed?.external,
+						images: !!match.embed?.images,
+					};
 					post._reply = !!match.record.reply;
 				}
 				return post;

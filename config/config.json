@@ -6,7 +6,9 @@
     "avatar": "assets/cr-art.png",
     "filter": {
       "text": "#criticalrolefanart",
-      "embed": true
+      "embed": {
+        "images": true
+      }
     },
     "blacklist": "at://did:plc:mzz36v4wdxh5d3wlhcwyvobb/app.bsky.graph.list/3k3omh6kein2u"
   }
