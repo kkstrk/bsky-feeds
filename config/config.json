@@ -2,7 +2,7 @@
   "cr-art": {
     "recordKey": "cr-art",
     "displayName": "Critical Role Art",
-    "description": "Posts tagged with #CriticalRoleFanart.",
+    "description": "Images tagged with #CriticalRoleFanart. Not spoiler-free.",
     "avatar": "assets/cr-art.png",
     "filter": {
       "text": "#criticalrolefanart",
