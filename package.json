@@ -6,9 +6,12 @@
     "publishFeed": "node ./scripts/publishFeedGen.mjs",
     "deleteFeed": "node ./scripts/deleteFeedGen.mjs",
     "deploy": "wrangler deploy",
-    "start": "wrangler dev"
+    "start": "wrangler dev --remote",
+    "debug": "wrangler tail --format=pretty",
+    "lint": "eslint --ext .js src"
   },
   "devDependencies": {
+    "eslint": "^8.46.0",
     "wrangler": "^3.0.0"
   },
   "dependencies": {

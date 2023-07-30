@@ -1,0 +1,13 @@
+{
+  "cr-art": {
+    "recordKey": "cr-art",
+    "displayName": "Critical Role Art",
+    "description": "Posts tagged with #CriticalRoleFanart.",
+    "avatar": "assets/cr-art.png",
+    "filter": {
+      "text": "#criticalrolefanart",
+      "embed": true
+    },
+    "blacklist": "at://did:plc:mzz36v4wdxh5d3wlhcwyvobb/app.bsky.graph.list/3k3omh6kein2u"
+  }
+}

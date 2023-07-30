@@ -1,3 +1,4 @@
 name = "bsky-feeds"
 main = "src/worker.js"
 compatibility_date = "2023-07-24"
+node_compat = true
