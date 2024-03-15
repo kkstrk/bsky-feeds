@@ -1,18 +1,10 @@
-export default async (params) => {
-	let result = [];
+export default async (agent, params) => {
+	const result = { posts: [], cursor: '' };
 
 	try {
-		if (params.count < 1) {
-			delete params.count;
-		}
-
-		if (params.offset < 1) {
-			delete params.offset;
-		}
-
-		const url = 'https://search.bsky.social/search/posts?' + new URLSearchParams(params);
-		const response = await fetch(url);
-		result = response.json();
+		const response = await agent.api.app.bsky.feed.searchPosts(params);
+		result.posts.push(...response.data.posts);
+		result.cursor = response.data.cursor;
 	} catch (error) {
 		console.log('Could not fetch search posts', error);
 	}
