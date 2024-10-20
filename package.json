@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "eslint": "^8.46.0",
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.81.0"
   },
   "dependencies": {
-    "@atproto/api": "^0.10.5",
-    "dotenv": "^16.3.1"
+    "@atproto/api": "^0.13.12",
+    "dotenv": "^16.4.5"
   }
 }

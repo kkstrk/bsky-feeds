@@ -2,3 +2,11 @@ name = "bsky-feeds"
 main = "src/worker.js"
 compatibility_date = "2023-07-24"
 node_compat = true
+kv_namespaces = [
+  { binding = "bsky-auth", id = "f1122582da254ba2ba6be47f882de3b4" }
+]
+[placement]
+mode = "smart"
+[observability]
+enabled = true
+head_sampling_rate = 1

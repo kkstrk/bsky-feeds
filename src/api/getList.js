@@ -11,7 +11,7 @@ export default async (agent, list) => {
 		const response = await agent.api.app.bsky.graph.getList(params);
 		result.push(...response.data.items);
 	} catch (error) {
-		console.log('Could not fetch list', error);
+		console.error('Could not fetch list', error);
 	}
 
 	return result;

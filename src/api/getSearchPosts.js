@@ -6,7 +6,7 @@ export default async (agent, params) => {
 		result.posts.push(...response.data.posts);
 		result.cursor = response.data.cursor;
 	} catch (error) {
-		console.log('Could not fetch search posts', error);
+		console.error('Could not fetch search posts', error);
 	}
 
 	return result;
